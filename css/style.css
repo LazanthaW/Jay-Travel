@@ -1,0 +1,229 @@
+/* Reset & Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h4 {
+  font-weight: 600;
+}
+h1 {
+  font-size: 2.5rem;
+  color: #f77f00; /* Orange color for headings */
+}
+
+/* Navbar */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #fff !important;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+.navbar-dark .navbar-nav .nav-link.active {
+  color: orange !important;
+}
+
+/* Hero Section */
+header {
+  background: linear-gradient(to right, #007bff, #0056b3);
+}
+
+/* Section Headings */
+h2 {
+  margin-bottom: 2rem;
+  color: #f77f00; /* Orange color for CONTACT US */
+  font-size: 2rem; /* Adjust font size as needed */
+  font-weight: 600; /* Bold */
+  letter-spacing: 1px; /* Slight letter spacing */
+}
+
+/* Top Destination */
+.destination-img {
+  width: 100%;
+  height: 225px;           /* Increase to 350px, 400px, or more */
+  object-fit: cover;
+  border-radius: 8px;
+}
+.custom-col {
+  flex: 0 0 19%; /* 100% / 5 = 20%, minus a little for gap */
+}
+@media (max-width: 768px) {
+  .custom-col {
+    flex: 0 0 45%; /* 2 per row on smaller screens */
+    margin-bottom: 20px;
+  }
+}
+
+
+
+/* Service Images */
+#services img {
+  max-height: 550px;
+  width: 100%;
+  border-radius: 8px;
+}
+/* Stats section  */
+.stats-section {
+  background-color: #002434; /* Example dark blue */
+}
+
+
+/* Over heard From Travellers */
+.testimonial-heading {
+      text-align: center;
+      font-size: 2%;
+      color: #ff6b35; /* Orange color */
+      margin-top: 40px;
+      margin-bottom: 30px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .testimonial-card {
+      border: none;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      height: 100%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .testimonial-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    .testimonial-subtitle {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .testimonial-quote {
+      font-style: italic;
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .testimonial-author {
+      font-size: 0.9rem;
+      color: #888;
+      text-align: center;
+    }
+
+    .testimonial-more {
+      font-size: 0.9rem;
+      color: #007bff;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .testimonial-more:hover {
+      text-decoration: underline;
+    }
+/* Contact Form */
+/* Custom CSS for the Contact Form */
+
+
+/* Custom CSS for the Contact Form */
+
+#contact {
+    background-color: #f8f9fa; /* Light background for the section */
+}
+
+.contact-title {
+    color: #f77f00; /* Orange color for CONTACT US */
+    font-size: 2.5rem; /* Adjust font size as needed */
+    font-weight: 700; /* Bold */
+    letter-spacing: 2px; /* Slight letter spacing */
+}
+
+.form-control.contact-input {
+    border: 1px solid #ced4da; /* Default Bootstrap border */
+    border-radius: .25rem; /* Default Bootstrap border-radius */
+    padding: .75rem 1rem; /* Increase padding for taller inputs */
+    font-size: 1rem; /* Adjust font size if needed */
+    box-shadow: none; /* Remove default focus glow if desired */
+}
+
+.form-control.contact-input::placeholder {
+    color: #6c757d; /* Darker placeholder color */
+    opacity: 1; /* Ensure placeholder is not faded */
+}
+
+.form-control.contact-input:focus {
+    border-color: #80bdff; /* Default Bootstrap focus color, or customize */
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25); /* Default Bootstrap focus shadow, or customize */
+}
+
+.form-check-input {
+    border: 1px solid #ced4da; /* Default checkbox border */
+    width: 1.25em; /* Slightly larger checkbox */
+    height: 1.25em;
+}
+
+.form-check-label {
+    font-size: 1rem; /* Adjust checkbox label font size */
+    color: #343a40; /* Darker color for checkbox label */
+}
+
+.btn-custom-submit {
+    background-color: #00bfff; /* Bright blue background for button */
+    border-color: #00bfff; /* Same border color */
+    color: white; /* White text */
+    padding: .75rem 2rem; /* Padding for button */
+    font-size: 1.25rem; /* Larger font size for button */
+    font-weight: bold;
+    border-radius: .25rem; /* Standard border-radius */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.btn-custom-submit:hover {
+    background-color: #009acd; /* Slightly darker blue on hover */
+    border-color: #009acd;
+    color: white;
+}
+
+/* No form-narrow-width needed for this layout as it's meant to be wider */
+/* No form-narrow-width needed for this layout as it's meant to be wider */
+/* Footer */
+footer {
+  font-size: 1rem;
+  
+}
+.custom-footer {
+  background-color: #002434; /* Dark background for footer */
+  color: #ffffff; /* White text */
+  padding: 2rem 0; /* Padding for footer */
+}
+.custom-footer h12{
+  color: #f8f8f8; /* Orange color for headings in footer */
+  font-weight: bold; /* Bold text */
+  margin-bottom: 1rem; /* Margin below headings */
+}
+
+.footer-sub {
+  background-color: #000000;
+  
+}
+.footer-sub p {
+  color: #ffffff; /* White text for footer bottom */
+  margin: 0; /* Remove default margin */
+  padding: 1rem 0; /* Padding for footer bottom */
+}
+
+
+
+

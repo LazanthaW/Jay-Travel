@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jay Tours</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  </head>
+  <script>
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // Stop form submission
+
+    const firstName = document.getElementById("firstName").value.trim();
+    const lastName = document.getElementById("lastName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+
+    // Basic validations
+    if (firstName === "" || lastName === "" || email === "" || phone === "") {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    // Email format check
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    // Phone number format check (digits only, length 7–15)
+    const phonePattern = /^[0-9]{7,15}$/;
+    if (!phonePattern.test(phone)) {
+      alert("Please enter a valid phone number (digits only, 7-15 characters).");
+      return;
+    }
+
+    alert("Form submitted successfully!");
+    // You can now actually submit the form, e.g. with AJAX or backend action
+    // this.submit(); // Uncomment to allow default form submission
+  });
+</script>
+
+  <body>
+    <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#"><h1>JAY TOURS</h1></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#about">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">SERVICES</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">TESTIMONIAL</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <!-- Hero Section -->
+    <section>
+      <div>
+        <div class="banner"></div>
+        <img
+          src="assets/images/banner.webp"
+          class="img-fluid w-100"
+          alt="Tour group exploring a scenic landscape with mountains and greenery under a bright sky, Jay Tours logo and slogan visible, atmosphere is welcoming and adventurous"
+        />
+      </div>
+    </section>
+
+    <!-- Top Destinations -->
+    <section class="py-5">
+      <div class="container text-center">
+        <h2>TOP DESTINATIONS</h2>
+        <div class="row justify-content-center g-4">
+          <!-- Destination Item -->
+          <div class="col-12 col-sm-6 col-md-4">
+            <h6>SRI LANKA</h6>
+            <img
+              src="assets/images/topdestinations/srilanka.jpg"
+              alt="Sri Lanka"
+              class="img-fluid destination-img"
+            />
+          </div>
+          <div class="col-12 col-sm-6 col-md-4">
+            <h6>ROME</h6>
+            <img
+              src="assets/images/topdestinations/rome.jpg"
+              alt="Rome"
+              class="img-fluid destination-img"
+            />
+          </div>
+          <div class="col-12 col-sm-6 col-md-4">
+            <h6>MALDIVES</h6>
+            <img
+              src="assets/images/topdestinations/maldives.jpg"
+              alt="Maldives"
+              class="img-fluid destination-img"
+            />
+          </div>
+          <div class="col-12 col-sm-6 col-md-4">
+            <h6>SWITZERLAND</h6>
+            <img
+              src="assets/images/topdestinations/switzerland.jpg"
+              alt="Switzerland"
+              class="img-fluid destination-img"
+            />
+          </div>
+          <div class="col-12 col-sm-6 col-md-4">
+            <h6>THAILAND</h6>
+            <img
+              src="assets/images/topdestinations/thailand.jpg"
+              alt="Thailand"
+              class="img-fluid destination-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+      <div class="container text-center">
+        <h2>OUR TEAM LEADS</h2>
+        <p>
+          Team work is the ability to work together toward a common vision. The
+          ability to direct individual accomplishments toward organizational
+          objectives. It is the fuel that allows common people to attain
+          uncommon results.
+        </p>
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <img
+              src="assets/images/teamleaders/hugosilva.jpg"
+              alt="Service 1"
+              class="img-fluid mb-3"
+            />
+            <h4>Hugo Silva</h4>
+          </div>
+          <div class="col-md-4 text-center">
+            <img
+              src="assets/images/teamleaders/imanolisilva.jpg"
+              alt="Service 2"
+              class="img-fluid mb-3"
+            />
+            <h4>Imanoli Arias</h4>
+          </div>
+          <div class="col-md-4 text-center">
+            <img
+              src="assets/images/teamleaders/javier.jpg"
+              alt="Service 3"
+              class="img-fluid mb-3"
+            />
+            <h4>Javier Bardem</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section py-5 text-white text-center">
+      <div class="container" text-center>
+        <div class="row">
+          <!-- Counter 1 -->
+          <div class="col-6 col-md-3 mb-4">
+            <h2>250k +</h2>
+            <p class="mb-0">HAPPY CLIENTS</p>
+          </div>
+          <!-- Counter 2 -->
+          <div class="col-6 col-md-3 mb-4">
+            <h2>800</h2>
+            <p class="mb-0">WEEKLY RESERVATIONS</p>
+          </div>
+          <!-- Counter 3 -->
+          <div class="col-6 col-md-3 mb-4">
+            <h2>150</h2>
+            <p class="mb-0">TRAVEL PARTNERS</p>
+          </div>
+          <!-- Counter 4 -->
+          <div class="col-6 col-md-3 mb-4">
+            <h2>15</h2>
+            <p class="mb-0">BRANCHES</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="py-5 bg-light">
+      <div class="container text-center">
+        <!-- Heading -->
+        <h2>OVER HEARD FROM TRAVELLERS</h2>
+
+        <!-- Testimonial Cards Row -->
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="testimonial-card card shadow-sm rounded p-3 h-100">
+              <h3 class="testimonial-title">Hotel Eucalyptus</h3>
+              <p class="testimonial-subtitle text-muted">in Greece</p>
+              <blockquote class="testimonial-quote">
+                "We booked Hotel Eucalyptus through Jay after reading a handful
+                of reviews, and it was easily the best decision we made."
+              </blockquote>
+              <a href="#" class="testimonial-more">...more</a>
+              <p class="testimonial-author mt-2">- Joyce from Canada</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div class="testimonial-card card shadow-sm rounded p-3 h-100">
+              <h3 class="testimonial-title">Holiday Inn Resort Batam</h3>
+              <p class="testimonial-subtitle text-muted">in Indonesia</p>
+              <blockquote class="testimonial-quote">
+                "Thanks Jay for letting me change room without charge and rebate
+                the difference. Nice staffs Agoda and Holiday Inn!"
+              </blockquote>
+              <a href="#" class="testimonial-more">...more</a>
+              <p class="testimonial-author mt-2">- Andy from Singapore</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-4">
+            <div class="testimonial-card card shadow-sm rounded p-3 h-100">
+              <h3 class="testimonial-title">Hotel Granvia Kyoto</h3>
+              <p class="testimonial-subtitle text-muted">in Japan</p>
+              <blockquote class="testimonial-quote">
+                "Our family was traveling via bullet train between cities in
+                Japan with our luggage - the location for this hotel made
+                that..."
+              </blockquote>
+              <a href="#" class="testimonial-more">...more</a>
+              <p class="testimonial-author mt-2">
+                - Diane from the United States
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+   <section id="contact" class="py-5">
+    <div class="container text-center">
+        <h2>CONTACT US</h2>
+        <form class="row g-3 mt-4 justify-content-center" id="contactForm">
+
+            <div class="col-12 col-md-8 col-lg-7"> <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control contact-input" placeholder="First Name" aria-label="First Name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control contact-input" placeholder="Last Name" aria-label="Last Name" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-8 col-lg-7 mb-3">
+                <input type="email" class="form-control contact-input" placeholder="E-mail" aria-label="E-mail" required>
+            </div>
+
+            <div class="col-12 col-md-8 col-lg-7 mb-4">
+                <input type="tel" class="form-control contact-input" placeholder="Phone Number" aria-label="Phone Number" required>
+            </div>
+
+            <div class="col-12 col-md-8 col-lg-7 mb-5">
+                <div class="form-check d-flex justify-content-center align-items-center">
+                    <input class="form-check-input me-2" type="checkbox" id="subscribeCheck">
+                    <label class="form-check-label" for="subscribeCheck">
+                        Subscribe to our newsletter
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-8 col-lg-7">
+                <button type="submit" class="btn btn-custom-submit w-50">SIGN IN</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section>
+    <!-- Footer -->
+    <footer class="custom-footer text-light py-5 my-0">
+ 
+      <div class="container">
+        <div class="row text-center text-md-start">
+          <!-- Column 1 -->
+          <div class="col-md-2 mb-4">
+            <h12 class="text-uppercase">Help</h12>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Careers</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Press</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="col-md-2 mb-4">
+            <h12 class="text-uppercase">About Us</h12>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none">Support</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">FAQs</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="col-md-2 mb-4">
+            <h12 class="text-uppercase">Destinations</h12>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none">Terms</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Privacy</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Cookies</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4 -->
+          <div class="col-md-3 mb-4">
+            <h12 class="text-uppercase">Partner With Us</h12>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none">Facebook</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Twitter</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 5 -->
+          <!-- Column 5 -->
+<div class="col-md-3 mb-4">
+  <ul class="list-unstyled">
+    <li>
+      <a href="tel:+94112875965" class="text-light text-decoration-none">
+        <i class="bi bi-telephone-fill me-2"></i>+94 112 875 965
+      </a>
+    </li>
+    <li>
+      <a href="tel:+94115879568" class="text-light text-decoration-none">
+        <i class="bi bi-telephone-fill me-2"></i>+94 115 879 568
+      </a>
+    </li>
+    <li class="mt-3">
+      <i class="bi bi-geo-alt-fill me-2"></i>No:056, Havelock Town,<br>
+      Colombo 05,<br>
+      Sri Lanka
+    </li>
+  </ul>
+</div>
+
+      </footer>   
+</section>
+<section class="footer-sub">
+        <!-- Footer bottom -->
+        <div class="text-center  pt-2 pb-2">
+          <p class="mb-10">&copy; 2025 SLIIT WEB DEVELOPMENT - All rights reserved.</p>
+        </div>
+      </div>
+      </section>
+   
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
